@@ -5,27 +5,27 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class WordService {
+public class CountryService {
 
-    private final WorldRepository worldRepository;
+    private final CountryRepository worldRepository;
 
-    public WordService(WorldRepository worldRepository) {
+    public CountryService(CountryRepository worldRepository) {
         this.worldRepository = worldRepository;
     }
 
-    public List<World> findAll(){
+    public List<Country> findAll(){
         return worldRepository.findAll();
     }
 
-    public World getOne(Integer id){
+    public Country getOne(Integer id){
         return worldRepository.getOne(id);
     }
 
-    public void saveWorld(World world){
+    public void saveWorld(Country world){
         worldRepository.save(world);
     }
 
-    public List<World> findByLangEndingWith(String lang){
+    public List<Country> findByLangEndingWith(String lang){
         return worldRepository.findByLangEndingWith(lang);
     }
 

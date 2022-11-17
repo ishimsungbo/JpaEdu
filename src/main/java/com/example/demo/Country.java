@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Setter
 @ToString
 @Entity
-public class World {
+public class Country {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

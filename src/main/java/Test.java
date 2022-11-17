@@ -1,11 +1,5 @@
-import com.example.demo.WordService;
-import com.example.demo.World;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 

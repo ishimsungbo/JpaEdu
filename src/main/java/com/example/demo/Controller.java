@@ -13,7 +13,7 @@ public class Controller {
 
 
     @Autowired
-    private WordService wordService;
+    private CountryService wordService;
 
     @GetMapping("/test")
     public String test(){
@@ -22,18 +22,18 @@ public class Controller {
     }
 
     @GetMapping("/world")
-    public List<World> test1(){
+    public List<Country> test1(){
         return wordService.findAll();
     }
 
     @GetMapping("/worldOne")
-    public World test2(){
+    public Country test2(){
         return wordService.getOne(3);
     }
 
     @GetMapping("/createWorld")
-    public World test3(){
-        World world = new World();
+    public Country test3(){
+        Country world = new Country();
         world.setLang("korean");
         world.setMoney("won");
         world.setNation("kor");
@@ -46,7 +46,7 @@ public class Controller {
     }
 
     @GetMapping("/worldLang")
-    public List<World> langLike(){
+    public List<Country> langLike(){
         return wordService.findByLangEndingWith("English");
     }
 }
