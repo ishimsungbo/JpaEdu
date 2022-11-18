@@ -21,18 +21,18 @@ public class Controller {
         return "test";
     }
 
-    @GetMapping("/world")
-    public List<Country> test1(){
+    @GetMapping("/Country")
+    public List<Country> CountryList(){
         return wordService.findAll();
     }
 
-    @GetMapping("/worldOne")
-    public Country test2(){
+    @GetMapping("/CountryOne")
+    public Country CountryRowFind(){
         return wordService.getOne(3);
     }
 
-    @GetMapping("/createWorld")
-    public Country test3(){
+    @GetMapping("/createCountry")
+    public Country CountryCreate(){
         Country world = new Country();
         world.setLang("korean");
         world.setMoney("won");
@@ -45,7 +45,7 @@ public class Controller {
         return world;
     }
 
-    @GetMapping("/worldLang")
+    @GetMapping("/CountryFindByLang")
     public List<Country> langLike(){
         return wordService.findByLangEndingWith("English");
     }
